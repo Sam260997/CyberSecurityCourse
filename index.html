@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified Ethical Hacker (CEH) | Unisoft India</title>
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0f1c;
+            color: #fff;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo img {
+            filter: drop-shadow(0 0 6px rgba(0, 255, 204, 0.7));
+            transition: 0.3s;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            /* background: #0A0F1C; */
+            backdrop-filter: blur(8px);
+            /* background: rgba(10, 15, 28, 0.9); */
+            background: #1A2238;
+            border-bottom: 1px solid rgba(0, 255, 204, 0.15);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00FFCC;
+        }
+
+        nav a.active {
+            color: #00FFCC;
+            border-bottom: 2px solid #00FFCC;
+            padding-bottom: 3px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #00ffcc;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            color: #ccc;
+        }
+
+        .buttons button {
+            padding: 14px 28px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .primary {
+            background: #00ffcc;
+            color: #000;
+        }
+
+        .secondary {
+            background: transparent;
+            border: 1px solid #00ffcc;
+            color: #00ffcc;
+        }
+
+        .stats {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .stat {
+            margin-right: 30px;
+        }
+
+        .stat h2 {
+            color: #00ffcc;
+        }
+
+        .hero-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .overview-box,
+        .why-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .overview-box div,
+        .why-box div {
+            background: #111827;
+            padding: 20px;
+            margin: 10px;
+            width: 220px;
+            border-radius: 8px;
+        }
+
+        .salary {
+            background: #050a14;
+        }
+
+        .salary-table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        .salary-table th,
+        .salary-table td {
+            border: 1px solid #00ffcc;
+            padding: 15px;
+        }
+
+        .salary-table th {
+            background: #00ffcc;
+            color: #000;
+        }
+
+        .highlight-row {
+            background: rgba(0, 255, 204, 0.1);
+            font-weight: bold;
+        }
+
+        .note {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .tools {
+            background: linear-gradient(135deg, #050a14, #0a0f1c);
+        }
+
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tool-card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border: 1px solid #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+        }
+
+        .tool-card h3 {
+            color: #00ffcc;
+        }
+
+        .offer {
+            background: radial-gradient(circle, #0a0f1c, #050a14);
+        }
+
+        .offer-box {
+            max-width: 500px;
+            margin: auto;
+            background: #111827;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+        }
+
+        .price {
+            font-size: 42px;
+            color: #00ffcc;
+            margin: 10px 0;
+        }
+
+        .strike {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .discount {
+            color: #ff4d4d;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .emi {
+            color: #ccc;
+        }
+
+        .timer-box {
+            margin: 20px 0;
+        }
+
+        .big-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .trainers {
+            background: #050a14;
+        }
+
+        .trainer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .trainer-card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .trainer-card h3 {
+            color: #00ffcc;
+        }
+
+        .trainer-card span {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .testimonials {
+            background: #050a14;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .testimonial-card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+            text-align: left;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .testimonial-card h4 {
+            margin-top: 15px;
+            color: #00ffcc;
+        }
+
+        .contact {
+            background: #111827;
+        }
+
+        /* ACCORDION */
+        .accordion button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background: #111827;
+            color: #00ffcc;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            background: #1f2937;
+            text-align: left;
+        }
+
+        .content ul {
+            line-height: 1.8;
+        }
+
+        /* POPUP */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #111827;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .popup-content input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+        }
+
+        .popup-content button {
+            width: 100%;
+            padding: 10px;
+            background: #00ffcc;
+            border: none;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            background: linear-gradient(135deg, #25D366, #1ebe5d);
+            color: white;
+
+            padding: 12px 18px;
+            border-radius: 50px;
+
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Hover Effect */
+        .whatsapp:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Pulse Animation */
+        .whatsapp::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            background: rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            70% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Icon */
+        .wa-icon {
+            font-size: 16px;
+        }
+
+
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                padding: 50px 20px;
+            }
+
+            .hero-image {
+                margin-top: 20px;
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#home" class="logo">
+            <img src="/image/favicon.png" alt="logo">
+            <h3>Unisoft Technologies</h3>
+        </a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#overview">Course</a>
+            <a href="#modules">Modules</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>
+                Become a <span class="highlight">Cybersecurity Expert</span><br>
+                with CEH Certification.
+            </h1>
+
+            <p>
+                Learn Ethical Hacking from scratch and become job-ready for SOC Analyst & Penetration Testing roles —
+                even if you're a beginner.
+            </p>
+
+            <div class="buttons">
+                <button class="primary" onclick="openPopup()">Book Free Demo</button>
+                <button class="secondary" onclick="scrollToSection('overview')">View Course</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h2 id="students">0</h2>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat">
+                    <h2 id="placements">0</h2>
+                    <p>Successful Careers</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="/image/SOC-Dashboard.webp" alt="Cyber Security">
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <h2>Certified Ethical Hacker (CEH) Course</h2>
+        <p>
+            Designed for beginners, IT and non-IT students. Learn from basics to advanced cybersecurity with hands-on
+            training.
+        </p>
+        <div class="overview-box">
+            <div>
+                <h3>Duration</h3>
+                <p>6 Months</p>
+            </div>
+            <div>
+                <h3>Mode</h3>
+                <p>Offline / Online</p>
+            </div>
+            <div>
+                <h3>Roles</h3>
+                <p>SOC Analyst, Penetration Tester</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="modules" class="modules">
+        <h2>What You Will Learn</h2>
+
+        <div class="accordion">
+
+            <button onclick="toggleModule(this)">+ Introduction to Ethical Hacking</button>
+            <div class="content">
+                <ul>
+                    <li>What is Hacking</li>
+                    <li>Who is a Hacker</li>
+                    <li>Skills of a Hacker</li>
+                    <li>Types of Hackers</li>
+                    <li>Reasons for Hacking</li>
+                    <li>Who are at the risk of Hacking attacks</li>
+                    <li>Effects of Computer Hacking on an organization</li>
+                    <li>Network Security Challenges</li>
+                    <li>Elements of Information Security</li>
+                    <li>The Security, Functionality & Usability Triangle</li>
+                    <li>What is Ethical Hacking</li>
+                    <li>Why Ethical Hacking is Necessary</li>
+                    <li>Scope & Limitations of Ethical Hacking</li>
+                    <li>What is Penetration Testing</li>
+                    <li>What is Vulnerability Auditing</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Foot Printing</button>
+            <div class="content">
+                <ul>
+                    <li>What is Foot Printing</li>
+                    <li>Objectives of Foot Printing</li>
+                    <li>Finding a company’s details</li>
+                    <li>Finding a company’s domain name</li>
+                    <li>Finding URLs</li>
+                    <li>Server details</li>
+                    <li>DNS information</li>
+                    <li>IP range</li>
+                    <li>Traceroute analysis</li>
+                    <li>Email tracking</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Hacking Web Servers & Web Applications</button>
+            <div class="content">
+                <ul>
+                    <li>Web server basics</li>
+                    <li>Server applications</li>
+                    <li>Directory traversal</li>
+                    <li>Website defacement</li>
+                    <li>Password brute forcing</li>
+                    <li>Defense methods</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Session Hijacking & SQL Injection</button>
+            <div class="content">
+                <ul>
+                    <li>Session hijacking</li>
+                    <li>XSS attack</li>
+                    <li>Hijacking tools</li>
+                    <li>SQL Injection</li>
+                    <li>Types of SQL Injection</li>
+                    <li>Detection tools</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Evading Firewalls, IDS & Honeypots</button>
+            <div class="content">
+                <ul>
+                    <li>Firewall concepts</li>
+                    <li>IDS working</li>
+                    <li>SPAN</li>
+                    <li>Honeypots</li>
+                    <li>Detection tools</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Denial of Service</button>
+            <div class="content">
+                <ul>
+                    <li>DoS & DDoS</li>
+                    <li>Botnets</li>
+                    <li>Attack techniques</li>
+                    <li>Defense methods</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Cryptography</button>
+            <div class="content">
+                <ul>
+                    <li>Cryptography basics</li>
+                    <li>Types</li>
+                    <li>Cipher algorithms</li>
+                    <li>Hashing</li>
+                    <li>PKI</li>
+                    <li>Attacks</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ System Hacking</button>
+            <div class="content">
+                <ul>
+                    <li>Password cracking</li>
+                    <li>Keyloggers</li>
+                    <li>Sniffing</li>
+                    <li>ARP poisoning</li>
+                    <li>MAC spoofing</li>
+                    <li>Defense techniques</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleModule(this)">+ Kali Linux</button>
+            <div class="content">
+                <ul>
+                    <li>Kali basics</li>
+                    <li>Tools</li>
+                    <li>Metasploit</li>
+                    <li>Windows attacks</li>
+                    <li>Android attacks</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="salary" class="salary">
+        <h2>Career Opportunities</h2>
+        <table class="salary-table">
+            <tr>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>SOC Analyst</td>
+                <td>₹2.5–4.5 LPA</td>
+            </tr>
+            <tr>
+                <td>Penetration Tester</td>
+                <td>₹3.5–6.5 LPA</td>
+            </tr>
+        </table>
+        <p class="note">*Salary ranges are based on industry trends and entry-level benchmarks.</p>
+    </section>
+
+    <section class="why">
+        <h2>Why Choose Unisoft?</h2>
+        <div class="why-box">
+            <div>
+                <h3>80,000+ Students</h3>
+                <p>25+ years experience</p>
+            </div>
+            <div>
+                <h3>25,000+ Careers</h3>
+                <p>Proven placements</p>
+            </div>
+            <div>
+                <h3>Expert Trainers</h3>
+                <p>Industry professionals</p>
+            </div>
+            <div>
+                <h3>Hands-On</h3>
+                <p>Real-world practice</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="tools">
+        <h2>Tools You Will Master</h2>
+        <p class="subtitle">Work with real cybersecurity tools used by professionals</p>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Kali Linux</h3>
+                <p>Primary OS for penetration testing</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>Metasploit</h3>
+                <p>Exploit development & attack simulation</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>Burp Suite</h3>
+                <p>Web application security testing</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>Wireshark</h3>
+                <p>Network traffic analysis</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>Nmap</h3>
+                <p>Network scanning & reconnaissance</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>OWASP ZAP</h3>
+                <p>Open-source tool for finding web vulnerabilities</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="trainers">
+        <h2>Learn From Industry Experts</h2>
+        <p class="subtitle">Get trained by professionals with real-world experience</p>
+
+        <div class="trainer-grid">
+
+            <div class="trainer-card">
+                <h3>Saurabh Joshi</h3>
+                <p>CTO & Senior Expert</p>
+                <span>Oracle DBA | Data Analytics</span>
+            </div>
+
+            <div class="trainer-card">
+                <h3>Nikhil Sakharwade</h3>
+                <p>Cloud & DevOps Expert</p>
+                <span>AWS | Azure | Docker</span>
+            </div>
+
+            <div class="trainer-card">
+                <h3>Aditya Bhalerao</h3>
+                <p>Ethical Hacking Specialist</p>
+                <span>CEH | Penetration Testing | Network Security</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <p class="subtitle">Real feedback from learners across different domains</p>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <p>
+                    "The training was very practical. I had no IT background, but the concepts were explained clearly
+                    and step by step."
+                </p>
+                <h4>- Rahul Sharma</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "Hands-on labs and real examples helped me understand cybersecurity concepts much better than
+                    theory."
+                </p>
+                <h4>- Sneha Patil</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "The trainers are very supportive and focus on real-world skills, not just syllabus completion."
+                </p>
+                <h4>- Amit Verma</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offer" class="offer">
+        <div class="offer-box">
+
+            <h2>Enroll Now & Start Your Cybersecurity Career</h2>
+
+            <p class="price">₹35,000</p>
+
+            <p class="strike">₹39,000</p>
+
+            <p class="discount">🎯 10% Early Bird Discount</p>
+
+            <p class="emi">No Cost EMI Available (12 Months)</p>
+
+            <div class="timer-box">
+                <span>Offer Ends In:</span>
+                <h3 id="countdown">00:00:00</h3>
+            </div>
+
+            <button class="primary big-btn" onclick="openPopup()">Enroll Now</button>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Visit Our Training Center</h2>
+
+        <p>
+            2nd Floor, Prananand Building, West High Court Road, Dharampeth, Nagpur
+        </p>
+
+        <p>
+            📞 +91 9503005060
+        </p>
+
+        <button class="primary" onclick="openPopup()">Book Demo Now</button>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">X</span>
+            <h3>Book Free Demo</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <button onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/919503005060" class="whatsapp">
+        <span class="wa-icon">💬</span>
+        Talk to Expert
+    </a>
+
+    <script>
+        // COUNTER
+        let students = 0, placements = 0;
+
+        let interval = setInterval(() => {
+            if (students < 80000) {
+                students += 2000;
+                document.getElementById("students").innerText = students + "+";
+            }
+            if (placements < 25000) {
+                placements += 500;
+                document.getElementById("placements").innerText = placements + "+";
+            }
+            if (students >= 80000 && placements >= 25000) clearInterval(interval);
+        }, 50);
+
+        // POPUP
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // FORM
+        function submitForm() {
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+
+            if (name === "" || phone === "") {
+                alert("Fill all fields");
+                return;
+            }
+
+            if (phone.length < 10) {
+                alert("Invalid number");
+                return;
+            }
+
+            alert("Demo Booked!");
+            closePopup();
+        }
+
+        // ACCORDION
+        function toggleModule(btn) {
+            let content = btn.nextElementSibling;
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                btn.innerText = btn.innerText.replace("-", "+");
+            } else {
+                content.style.display = "block";
+                btn.innerText = btn.innerText.replace("+", "-");
+            }
+        }
+
+        // COUNTDOWN (keep this also)
+        let t = 86400;
+        setInterval(() => {
+            let h = Math.floor(t / 3600);
+            let m = Math.floor((t % 3600) / 60);
+            let s = t % 60;
+            document.getElementById("countdown").innerText = h + ":" + m + ":" + s;
+            t--;
+        }, 1000);
+
+        setTimeout(() => {
+            openPopup();
+        }, 12000);
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+
+    </script>
+
+</body>
+
+</html>
